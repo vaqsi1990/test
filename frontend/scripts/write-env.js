@@ -3,7 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const apiBase = (process.env.PUBLIC_API_URL || '').trim().replace(/\/$/, '');
+const apiBase = (
+  process.env.PUBLIC_API_URL || 'https://test-44z5.onrender.com'
+).trim().replace(/\/$/, '');
 
 if (!apiBase) {
   console.warn(

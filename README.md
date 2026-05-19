@@ -44,7 +44,7 @@ FRONTEND_URL=https://ваш-frontend.onrender.com
 | Publish Directory | `.` |
 
 ```env
-PUBLIC_API_URL=https://ваш-backend.onrender.com
+PUBLIC_API_URL=https://test-44z5.onrender.com
 ```
 
 1. Deploy backend → скопируйте URL  
