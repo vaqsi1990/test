@@ -70,9 +70,12 @@ form/
 │   ├── style.css
 │   ├── js/
 │   │   ├── config.js
+│   │   ├── env.js
 │   │   ├── form.js
 │   │   ├── ai.js
 │   │   └── carousel.js
+│   ├── scripts/write-env.js
+│   └── package.json
 │   └── projects/
 │       ├── projects.json
 │       └── *.jpg
@@ -120,6 +123,58 @@ form/
 |---------|----------|
 | Смена тона | Кнопки «Официально», «Коротко», «Вежливо» — до 2000 символов, таймаут 25 с |
 | Резюме | При отправке — 1–2 предложения в письме владельцу; без ключа письмо уходит без резюме |
+
+## Деплой на Render (backend и frontend отдельно)
+
+### 1. Backend — Web Service
+
+| Поле | Значение |
+|------|----------|
+| Root Directory | `backend` |
+| Build Command | `npm install` |
+| Start Command | `npm start` |
+
+**Environment variables:**
+
+```env
+OWNER_EMAIL=...
+MAIL_FROM=...
+MAIL_FROM_NAME=Обратная связь
+SITE_NAME=Обратная связь
+BREVO_API_KEY=...
+OPENAI_API_KEY=sk-...
+OPENAI_MODEL=gpt-4o-mini
+SERVE_STATIC=false
+FRONTEND_URL=https://ваш-frontend.onrender.com
+```
+
+`PORT` задаёт Render автоматически. `SMTP_*` не нужны — используется Brevo API.
+
+После деплоя скопируйте URL backend, например `https://test-api.onrender.com`.
+
+### 2. Frontend — Static Site
+
+| Поле | Значение |
+|------|----------|
+| Root Directory | `frontend` |
+| Build Command | `npm install && npm run build` |
+| Publish Directory | `.` (корень `frontend`) |
+
+**Environment variable:**
+
+```env
+PUBLIC_API_URL=https://ваш-backend.onrender.com
+```
+
+Build создаёт `js/env.js` с адресом API. Без `PUBLIC_API_URL` форма на Render не найдёт backend.
+
+### 3. Порядок
+
+1. Задеплойте **backend**, возьмите его URL.
+2. Задеплойте **frontend** с `PUBLIC_API_URL` = URL backend.
+3. В backend укажите `FRONTEND_URL` = URL frontend (без `/` в конце) и сделайте **Redeploy**.
+
+Локально по-прежнему: `npm run dev` — всё на `http://localhost:3000`.
 
 ## Автор
 

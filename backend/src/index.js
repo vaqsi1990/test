@@ -10,6 +10,7 @@ import feedbackRouter from './routes/feedback.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const frontendPath = path.resolve(__dirname, '../../frontend');
+
 try {
   assertMailConfig();
 } catch (error) {
@@ -17,11 +18,36 @@ try {
   process.exit(1);
 }
 
+function getCorsOptions() {
+  if (!config.frontendUrl) {
+    return { origin: true };
+  }
+
+  const allowed = config.frontendUrl
+    .split(',')
+    .map((url) => url.trim())
+    .filter(Boolean);
+
+  return {
+    origin(origin, callback) {
+      if (!origin || allowed.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+      callback(new Error(`CORS: origin not allowed — ${origin}`));
+    },
+  };
+}
+
 const app = express();
 
 app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors({ origin: true }));
+app.use(cors(getCorsOptions()));
 app.use(express.json({ limit: '32kb' }));
+
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true });
+});
 
 app.use(
   '/api/feedback',
@@ -51,12 +77,15 @@ app.use(
   aiRouter,
 );
 
-app.use(express.static(frontendPath));
+if (config.serveStatic) {
+  app.use(express.static(frontendPath));
 
-app.get('*', (_req, res) => {
-  res.sendFile(path.join(frontendPath, 'index.html'));
-});
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(frontendPath, 'index.html'));
+  });
+}
 
 app.listen(config.port, () => {
-  console.log(`http://localhost:${config.port}`);
+  const mode = config.serveStatic ? 'API + frontend' : 'API only';
+  console.log(`http://localhost:${config.port} (${mode})`);
 });
