@@ -76,6 +76,10 @@ body {
 .hero {
   position: relative;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   overflow: hidden;
 
   padding: 72px 32px;
@@ -96,24 +100,8 @@ body {
   box-shadow: var(--shadow);
 }
 
-.hero::before {
-  content: "";
 
-  position: absolute;
 
-  inset: 0;
-
-  background:
-    linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,.05),
-      transparent
-    );
-
-  transform: translateX(-100%);
-  animation: shine 8s linear infinite;
-}
 
 @keyframes shine {
   to {
@@ -125,7 +113,15 @@ body {
   position: relative;
   z-index: 2;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
   max-width: 760px;
+  margin: 0 auto;
+
+  text-align: center;
 }
 
 .hero__eyebrow {
@@ -163,17 +159,17 @@ body {
 
 .hero__text {
   max-width: 640px;
+  margin: 0 auto 36px;
 
   color: var(--muted);
 
   font-size: 18px;
-
-  margin-bottom: 36px;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -366,6 +362,57 @@ body {
 
 .profile-block__note strong {
   color: #e9d5ff;
+  font-weight: 700;
+}
+
+.profile-block__subtitle {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ddd6fe;
+}
+
+.workflow-steps {
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  counter-reset: workflow;
+}
+
+.workflow-steps__item {
+  padding: 14px 16px 14px 44px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  counter-increment: workflow;
+}
+
+.workflow-steps__item::before {
+  content: counter(workflow);
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #ede9fe;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.35);
+}
+
+.workflow-steps__item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
   font-weight: 700;
 }
 
