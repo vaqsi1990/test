@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frontend Developer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="hero__eyebrow">Full Stack Developer</span>
+
+      <h1 class="hero__title">
+        Валериан Маргалитадзе
+        
+      </h1>
+
+      
+
+      <div class="hero__actions">
+        <a target="_blank" href="https://github.com/vaqsi1990" class="hero__button">GitHub</a>
+        <a href="#contacts" class="hero__button hero__button--secondary">
+          Связаться
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="profile-card">
+
+    <div class="profile-card__hero">
+      <div class="profile-card__avatar">FD</div>
+
+      <div>
+        <p class="profile-card__eyebrow">Обо мне</p>
+        <h2 class="profile-card__title">
+          Full Stack Developer
+        </h2>
+      </div>
+    </div>
+
+    <p class="profile-card__lead">
+        Я, Валериан Маргалитадзе. В основном работаю с фронтендом React, Typescript, Next.js, Html5, но также владею бекенд Node.js, PostgreSQL, MySQL, Nest.js. Последние 3 года работаю на фрилансе и сделал несколько коммерческих проектов. Вы можете ознакомиться с моими работами - https://github.com/vaqsi1990?tab=repositories.
+        Работая над этими проектами, я получил опыт:
+        разработки интерфейсов на React и Next.js;
+        работы с серверной логикой и базой данных PostgreSQL;
+        самостоятельного ведения проекта — от получения задания до финальной сдачи;
+        коммуникации с заказчиками и соблюдения сроков
+    </p>
+
+    <nav class="profile-card__nav">
+      <a href="#stack" class="profile-card__nav-link">Стек</a>
+      <a href="#experience" class="profile-card__nav-link">Опыт</a>
+      <a href="#projects" class="profile-card__nav-link">Проекты</a>
+      <a href="#contacts" class="profile-card__nav-link">Контакты</a>
+    </nav>
+
+    <!-- STACK -->
+    <div class="profile-block" id="stack">
+      <h3 class="profile-block__title">Технологии</h3>
+
+      <ul class="tag-list">
+        <li class="tag">HTML</li>
+        <li class="tag">CSS</li>
+        <li class="tag">JavaScript</li>
+        <li class="tag">TypeScript</li>
+        <li class="tag">React</li>
+        <li class="tag">Next.js</li>
+        <li class="tag">Tailwind</li>
+        <li class="tag">Node.js</li>
+        <li class="tag">Nest.js</li>
+        <li class="tag">PostgreSQL</li>
+       
+      </ul>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="profile-block" id="experience">
+      <h3 class="profile-block__title">Опыт</h3>
+
+      <div class="carousel" id="projectsCarousel" tabindex="0" aria-roledescription="carousel" aria-label="Проекты">
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="carouselTrack"></div>
+        </div>
+
+        <button type="button" class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Предыдущий слайд">
+          ‹
+        </button>
+        <button type="button" class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Следующий слайд">
+          ›
+        </button>
+      </div>
+
+      <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Выбор слайда"></div>
+    </div>
+
+    <!-- WORKFLOW -->
+    <div class="profile-block">
+      <h3 class="profile-block__title">
+        Как я работаю
+      </h3>
+
+      <ul class="focus-grid">
+
+        <li class="focus-card">
+        
+
+          <h4 class="focus-card__title">
+            UI/UX
+          </h4>
+
+          <p class="focus-card__text">
+            Создаю понятные и адаптивные интерфейсы.
+          </p>
+        </li>
+
+        <li class="focus-card">
+        
+
+          <h4 class="focus-card__title">
+            AI Tools
+          </h4>
+
+          <p class="focus-card__text">
+            Использую AI для ускорения разработки
+            и генерации решений.
+          </p>
+        </li>
+
+        <li class="focus-card">
+        
+
+          <h4 class="focus-card__title">
+            API Integration
+          </h4>
+
+          <p class="focus-card__text">
+            Работаю с REST API,
+            backend и обработкой ошибок.
+          </p>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="profile-block" id="contacts">
+      <h3 class="profile-block__title">Контакты</h3>
+
+      <ul class="contact-grid">
+        <li class="contact-card">
+          <span class="contact-card__icon" aria-hidden="true">✉</span>
+         
+          <a
+            class="contact-card__link"
+            href="mailto:v.margalitadze90@gmail.com"
+          >v.margalitadze90@gmail.com</a>
+        </li>
+
+        <li class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true">in</span>
+          <a
+            class="contact-card__link"
+            href="https://www.linkedin.com/in/valerian-margalitadze-91aa631a0/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
+        </li>
+
+        <li class="contact-card">
+         
+          <span class="contact-card__icon" aria-hidden="true">Tg</span>
+          <a
+            class="contact-card__link"
+            href="https://t.me/Vaqsi_Margalitadze"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Telegram</a>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback-card" id="feedback">
+
+    <header class="feedback-card__header" id="cardHeader">
+      <h2 class="feedback-card__title">
+        Обратная связь
+      </h2>
+
+      <p class="feedback-card__subtitle">
+        Оставьте сообщение — я свяжусь с вами.
+      </p>
+    </header>
+
+    <div class="form-alert" id="formAlert" hidden role="alert">
+      <p class="form-alert__text" id="formAlertText"></p>
+    </div>
+
+    <div class="feedback-status feedback-status--success" id="statusSuccess" hidden>
+      <div class="feedback-status__icon" aria-hidden="true">✓</div>
+      <h3 class="feedback-status__title">Готово!</h3>
+      <p class="feedback-status__text" id="successText">
+        Сообщение отправлено.
+      </p>
+      <button type="button" class="form-submit" id="resetBtn">
+        Отправить ещё
+      </button>
+    </div>
+
+    <div class="feedback-status feedback-status--error" id="statusError" hidden>
+      <div class="feedback-status__icon feedback-status__icon--error" aria-hidden="true">!</div>
+      <h3 class="feedback-status__title">Не удалось отправить</h3>
+      <p class="feedback-status__text" id="errorText"></p>
+      <button type="button" class="form-submit" id="retryBtn">
+        Попробовать снова
+      </button>
+    </div>
+
+    <form class="feedback-form" id="feedbackForm" novalidate>
+
+      <div class="form-group">
+        <label class="form-label" for="name">
+          Имя
+        </label>
+
+        <input
+          class="form-input"
+          type="text"
+          id="name"
+          name="name"
+          autocomplete="name"
+          placeholder="Ваше имя"
+        >
+        <p class="form-error" id="error-name" hidden></p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="phone">
+          Телефон
+        </label>
+
+        <input
+          class="form-input"
+          type="tel"
+          id="phone"
+          name="phone"
+          autocomplete="tel"
+          placeholder="+7 (999) 000-00-00"
+        >
+        <p class="form-error" id="error-phone" hidden></p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">
+          Email
+        </label>
+
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="email"
+          autocomplete="email"
+          placeholder="example@mail.ru"
+        >
+        <p class="form-error" id="error-email" hidden></p>
+      </div>
+
+      <div class="form-group">
+
+        <label class="form-label" for="comment">
+          Комментарий
+        </label>
+
+        <textarea
+          class="form-input form-input--textarea"
+          id="comment"
+          name="comment"
+          placeholder="Ваше сообщение"
+        ></textarea>
+
+        <p class="form-error" id="error-comment" hidden></p>
+
+        <div class="form-tone">
+
+          <span class="form-tone__label">
+            AI Helper
+          </span>
+
+          <p class="form-ai-hint" id="aiHint" hidden></p>
+
+          <div class="form-tone__buttons" id="aiToolbar">
+
+            <button
+              type="button"
+              class="form-ai-btn"
+              data-ai-mode="formal"
+            >
+              Официально
+            </button>
+
+            <button
+              type="button"
+              class="form-ai-btn form-ai-btn--secondary"
+              data-ai-mode="shorten"
+            >
+              Коротко
+            </button>
+
+            <button
+              type="button"
+              class="form-ai-btn form-ai-btn--ghost"
+              data-ai-mode="polite"
+            >
+              Вежливо
+            </button>
+
+            <button
+              type="button"
+              class="form-ai-btn form-ai-btn--ghost"
+              id="aiUndoBtn"
+              disabled
+            >
+              Отменить
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+      <button class="form-submit" type="submit" id="submitBtn">
+        Отправить
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+<script type="module" src="./js/form.js"></script>
+<script type="module" src="./js/ai.js"></script>
+<script type="module" src="./js/carousel.js"></script>
+
+</body>
+</html>
