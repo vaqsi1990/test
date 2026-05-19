@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { config } from '../config.js';
 import { sendFeedbackEmails } from '../services/mail.js';
 import { summarizeComment } from '../services/openai.js';
-import { validateFeedback } from '../validators/feedback.js';
+import { validateFeedback } from '../schemas/feedbackSchema.js';
 
 const router = Router();
 

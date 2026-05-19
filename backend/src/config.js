@@ -29,9 +29,7 @@ function requireEnv(name) {
 
 export const config = {
   port: Number(process.env.PORT) || 3000,
-  /** false — только API (отдельный деплой frontend на Render Static) */
-  serveStatic: process.env.SERVE_STATIC !== 'false',
-  /** URL фронтенда для CORS, через запятую: https://site.onrender.com */
+  /** URL фронтенда для CORS: https://site.onrender.com */
   frontendUrl: normalizeEnv(process.env.FRONTEND_URL),
   ownerEmail: process.env.OWNER_EMAIL,
   mailFrom: normalizeEnv(process.env.MAIL_FROM),

@@ -1,5 +1,3 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
 import cors from 'cors';
 import express from 'express';
 import rateLimit from 'express-rate-limit';
@@ -7,9 +5,6 @@ import helmet from 'helmet';
 import { assertMailConfig, config } from './config.js';
 import aiRouter from './routes/ai.js';
 import feedbackRouter from './routes/feedback.js';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const frontendPath = path.resolve(__dirname, '../../frontend');
 
 try {
   assertMailConfig();
@@ -77,15 +72,6 @@ app.use(
   aiRouter,
 );
 
-if (config.serveStatic) {
-  app.use(express.static(frontendPath));
-
-  app.get('*', (_req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-  });
-}
-
 app.listen(config.port, () => {
-  const mode = config.serveStatic ? 'API + frontend' : 'API only';
-  console.log(`http://localhost:${config.port} (${mode})`);
+  console.log(`http://localhost:${config.port}`);
 });
