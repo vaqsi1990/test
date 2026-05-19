@@ -3,42 +3,49 @@
     "title": "Sleepandbed",
     "image": "./projects/1.jpg",
     "url": "https://sleepandbed.ge/",
-    "github": "https://github.com/vaqsi1990/sbg"
+    "github": "https://github.com/vaqsi1990/sbg",
+    "contribution": "С нуля solo: интернет-магазин — UI, каталог, корзина, админка, API, PostgreSQL, деплой."
   },
   {
     "title": "Istanbul Travel",
     "image": "./projects/2.jpg",
     "url": "https://www.istanbultravel.ge/",
-    "github": "https://github.com/vaqsi1990/travellkilla"
+    "github": "https://github.com/vaqsi1990/travellkilla",
+    "contribution": "С нуля solo: лендинг турагентства — вёрстка, формы заявок, бэкенд, почта, хостинг."
   },
   {
     "title": "Lappetit",
     "image": "./projects/3.jpg",
     "url": "https://lappetit.ge/",
-    "github": "https://github.com/vaqsi1990/lapettit"
+    "github": "https://github.com/vaqsi1990/lapettit",
+    "contribution": "С нуля solo: сайт ресторана — меню, бронирование, админ-панель, API, база данных."
   },
   {
     "title": "Eduarena",
     "image": "./projects/4.jpg",
     "url": "https://eduarena.ge/",
-    "github": "https://github.com/vaqsi1990/school"
+    "github": "https://github.com/vaqsi1990/school",
+    "contribution": "С нуля solo: образовательная платформа — личный кабинет, курсы, оплата, backend + БД."
   },
   {
     "title": "Ski Rent Fanatic",
     "image": "./projects/5.jpg",
     "url": "http://skirentfanatic.ge/",
-    "github": "https://github.com/vaqsi1990/ski"
+    "github": "https://github.com/vaqsi1990/ski",
+    "contribution": "С нуля solo: аренда снаряжения — каталог, заявки, CRM-логика, интеграции, продакшен."
   },
   {
     "title": "Irinadzart",
     "image": "./projects/6.jpg",
     "url": "http://irinadzart.ge/",
-    "github": "https://github.com/vaqsi1990/irinaart"
+    "github": "https://github.com/vaqsi1990/irinaart",
+    "contribution": "С нуля solo: портфолио художника — галерея, адаптив, CMS-часть, деплой и поддержка."
   },
   {
     "title": "King Laundry",
     "image": "./projects/7.jpg",
     "url": "https://kinglaundry.ge/",
-    "github": "https://github.com/vaqsi1990/loundry"
+    "github": "https://github.com/vaqsi1990/loundry",
+    "contribution": "С нуля solo: сервис химчистки — прайс, заказ услуг, уведомления, API, PostgreSQL."
   }
 ]

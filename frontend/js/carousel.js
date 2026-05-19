@@ -96,6 +96,12 @@ function renderSlides() {
         </div>
         <div class="carousel__footer">
           <p class="carousel__title">${escapeHtml(project.title)}</p>
+          ${
+            project.contribution
+              ? `<p class="carousel__contribution-label">Что делал лично</p>
+          <p class="carousel__contribution">${escapeHtml(project.contribution)}</p>`
+              : ''
+          }
           <p class="carousel__links">
             <a href="${escapeAttr(project.url)}" target="_blank" rel="noopener noreferrer">Сайт</a>
             <span aria-hidden="true">·</span>

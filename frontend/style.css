@@ -356,6 +356,19 @@ body {
   margin-bottom: 20px;
 }
 
+.profile-block__note {
+  margin: -8px 0 24px;
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.profile-block__note strong {
+  color: #e9d5ff;
+  font-weight: 700;
+}
+
 /* TAGS */
 
 .tag-list {
@@ -555,6 +568,23 @@ body {
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
+}
+
+.carousel__contribution-label {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a78bfa;
+}
+
+.carousel__contribution {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted);
+  text-align: left;
 }
 
 .carousel__links {
